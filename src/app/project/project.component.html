@@ -1,0 +1,17 @@
+<a [routerLink]="['/project-detail', id]">
+    <div class="project-card">
+        <div class="project-img">
+            <img [src]="projectCardImg" alt="{{ name }}">
+        </div>
+        <hr class="separator">
+        <div class="project-info">
+            <h3 class="project-name">{{ name }}</h3>
+            <p class="project-technologies">{{ technologies }}</p>
+            <div class="category-container">
+                <span class="project-category" *ngFor="let c of category">
+                    {{ c }}
+                </span>
+            </div>
+        </div>
+    </div> 
+  </a>

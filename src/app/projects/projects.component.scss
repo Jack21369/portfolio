@@ -1,0 +1,61 @@
+:host {
+    --white: #f6f6f6;
+}
+
+.project-title-container{
+    margin-bottom: 2rem;
+}
+
+.projects-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100svh;
+    background-color: var(--white);
+}
+
+
+.projects-container {
+    display: grid;
+    gap: 30px;
+    padding: 0 40px 0 40px;
+    color: #333; 
+    width: 80svw;
+
+}
+
+
+.project-title-container{
+    display: flex;
+    align-items: flex-start;
+    width: 80svw;
+}
+
+/* For very wide screens (1536px and above) */
+@media (min-width: 1536px) {
+    .projects-container {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+/* For screens between 1024px and 1535px */
+@media (max-width: 1535px) {
+    .projects-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* For screens between 640px and 1023px */
+@media (max-width: 1023px) {
+    .projects-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Optionally, for screens smaller than 640px, you could have a single column layout */
+@media (max-width: 639px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}

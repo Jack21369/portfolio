@@ -1,0 +1,248 @@
+
+
+:host {
+    --white: #f6f6f6;
+}
+
+* {
+    background-color: var(--white);
+}
+
+.nav-bar-gap {
+    height: 10vh;
+    background-color: var(--white);
+    background: var(--white);
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.home .text{
+    font-size: 60px;
+    position: relative;
+    font-weight: 500;
+}
+
+.first-text {
+    transform: translateY(-10vh);
+    animation: returnPosition 2s forwards;
+}
+
+.sec-text{
+    margin-top: 25px;
+    background-size: 300%;
+    background-clip: text;
+    color: transparent;
+    animation: gradientAnimation 8s linear infinite;
+    --bg-size: 400%;
+    --color-one: #35d6c9;
+    --color-two: #4fc3f7;
+    --color-three: #a3f7bf;
+    background: linear-gradient(
+        to right,
+        var(--color-one),
+        var(--color-two),
+        var(--color-three), 
+        var(--color-one)
+      )
+      0 0 / var(--bg-size) 100%;
+    color: transparent;
+    background-clip: text;
+    
+}
+
+.sec-text:before{
+    content: "";
+    position: absolute;
+    left: 0%;
+    top: 10%;
+    height: 80%;
+    width: 100%;
+    border-left: 5px solid #a3f7bf;
+    background-color: var(--white);
+    animation: typing 3s steps(17) infinite;
+}
+
+.home-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 500px;
+    margin-top: 100px;
+}
+
+.glowing-button {
+    border: 3px solid transparent;
+    background: linear-gradient(white, white), linear-gradient(45deg, #35d6c9, #4fc3f7, #a3f7bf);
+    background-origin: border-box;
+    background-clip: padding-box,border-box;
+    border-radius: 20px;
+    font-size: 25px;
+    padding: 10px 20px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glowing-button:hover {
+    background-image: linear-gradient(45deg, #35d6c9, #4fc3f7, #a3f7bf, #35d6c9);
+}
+
+.glowing-button{
+    border: none;
+    outline: none;
+    color: black;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    transform: translateY(10vh);
+    animation: returnPosition 2s forwards;
+
+}
+
+.glowing-button::before {
+    content: '';
+    background: linear-gradient(45deg, #35d6c9, #4fc3f7, #a3f7bf, #35d6c9);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glowing-button:active {
+    color: white;
+}
+
+.glowing-button:active:after {
+    background: transparent;
+    transform: translateY(100vh);
+}
+
+.glowing-button:hover:before{
+    opacity: 1;
+}
+
+.glowing-button:after{
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(230, 230, 230);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+
+/* When the screen size is greater than 1200px, set a maximum font size */
+@media (min-width: 1200px) {
+    .home .text {
+        font-size: 60px;
+    }
+    .glowing-button {
+        font-size: 18px; /* Maximum font size */
+        padding: 10px 20px; /* Maximum padding */
+        border-radius: 20px; /* Maximum border-radius */
+    }
+    .home-buttons {
+        width: 500px; /* Maximum gap */
+        margin-top: 75px;
+    }
+}
+
+/* Adjust font size for medium screens */
+@media (max-width: 1199px) and (min-width: 992px) {
+    .home .text {
+        font-size: 50px; /* Adjust as needed */
+    }
+    .glowing-button {
+        font-size: 16px; /* Adjust as needed */
+        padding: 8px 16px; /* Adjust as needed */
+        border-radius: 16px; /* Adjust as needed */
+    }
+    .home-buttons {
+        width: 400px; /* Adjust as needed */
+        margin-top: 50px;
+    }
+}
+
+/* Adjust font size for small screens */
+@media (max-width: 991px) and (min-width: 768px) {
+    .home .text {
+        font-size: 40px; /* Adjust as needed */
+    }
+    .glowing-button {
+        font-size: 14px; /* Adjust as needed */
+        padding: 6px 12px; /* Adjust as needed */
+        border-radius: 12px; /* Adjust as needed */
+    }
+    .home-buttons {
+        width: 300px; /* Adjust as needed */
+        margin-top: 25px;
+    }
+}
+
+/* Adjust font size for extra small screens */
+@media (max-width: 767px) {
+    .home .text {
+        font-size: 30px; /* Adjust as needed */
+    }
+    .glowing-button {
+        font-size: 14px; /* Adjust as needed */
+        padding: 6px 12px; /* Adjust as needed */
+        border-radius: 12px; /* Adjust as needed */
+    }
+    .home-buttons {
+        width: 300px; /* Adjust as needed */
+        margin-top: 25px;
+    }
+}
+
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+@keyframes typing {
+    40%, 60% {
+        left: 100%;
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+
+@keyframes gradientAnimation {
+    to {
+        background-position: var(--bg-size) 0;
+        }
+}
+
+@keyframes returnPosition {
+
+    100% {
+        transform: translateY(0);
+    }
+}

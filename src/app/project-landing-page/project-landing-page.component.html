@@ -1,0 +1,43 @@
+<div class="landing-page-container">
+    <div class="project-landing-page">
+        <div class="left project-card fadeInFromLeft">
+            <div class="project-img">
+                <a [href]="projectDetails?.link" target="_blank">
+                    <img class="showcase-img" [src]="projectDetails?.img" alt="{{ projectDetails?.name }}">
+                </a>
+            </div>
+        </div> 
+        <div class="right project-info fadeInFromRight">
+            <h1 class="project-name">{{ projectDetails?.name }}</h1>
+            <div class="category-container">
+                <div class="category" *ngFor="let c of projectDetails?.category">
+                    <span class="project-category">
+                        {{ c }}
+                    </span>
+                </div>
+            </div>
+            <p class="project-description">{{ projectDetails?.description }}</p>
+            
+            <p class="project-technologies">Technologies: {{ projectDetails?.technologies }}</p>
+            <div class="buttons-container">
+                <a [href]="projectDetails?.link" class="link-container" target="_blank">
+                    <div class="link">
+                        View Project
+                    </div>
+                    <svg class="arrow" width="16" height="16" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12h14m-8-8l8 8-8 8" stroke="#f8f9fa" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </a>
+
+                <a (click)="scrollToProjectBreakdown()" class="link-container learn-more" target="_blank">
+                    <div class="link learn-more-text">
+                        Learn More
+                    </div>
+                    <svg class="arrow down-arrow" width="16" height="16" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 5v14m8-8l-8 8-8-8" stroke="#323232" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

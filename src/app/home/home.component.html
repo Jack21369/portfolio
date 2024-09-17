@@ -1,0 +1,20 @@
+<div class="home" id="home">
+    <span class="text first-text" id="jacklee">
+        Jack Lee
+    </span>
+    <span class="text sec-text">
+        Software Engineer
+    </span>
+    <div class="home-buttons" id="no-nav-bar">
+        <button (click)="scrollToProjects()" class="glowing-button projects-button">My Work</button>
+        <button (click)="scrollToAbout()" class="glowing-button about-me-button">About Me</button>
+        <a href="../../assets/resume.pdf" target="_blank" class="glowing-button resume">Resume</a>
+    </div>
+
+</div>
+
+<div class="nav-bar-gap" id="about-sec"></div>
+<app-about id="about"></app-about>
+<div class="nav-bar-gap" id="projects-sec"></div>
+<app-projects id="projects"></app-projects>
+<div class="nav-bar-gap" id="footer-sec"></div>

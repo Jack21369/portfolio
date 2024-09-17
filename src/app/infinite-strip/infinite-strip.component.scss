@@ -1,0 +1,63 @@
+
+.infinite-strip-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5svh;
+}
+
+.strip-container {
+    width: 75svw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.strip-title {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.logo-strip {
+    display: flex;
+    position: relative;
+    align-items: center;
+    overflow: hidden;
+    height: 10vh;
+    width: 100%;
+    -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+    );
+    mask: linear-gradient(90deg, transparent, white 1%, white 99%, transparent);
+}
+
+.logo-container{
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    animation: move-ltr 21s linear infinite;
+}
+
+.logo {
+    height: 8vh;
+    margin: 0px 0px 0px 80px;
+}
+
+@keyframes move-ltr {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - 1rem));
+    }
+}

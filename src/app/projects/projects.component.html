@@ -1,0 +1,22 @@
+
+<div class="projects-page">
+  <div class="project-title-container">
+      <h1 class="project-title">
+        Projects
+      </h1>
+  </div>
+  
+  <div class="projects-container">
+      <div *ngFor="let project of projects">
+          <app-project [name]="project.name" 
+            [technologies]="project.technologies"
+            [description]="project.description" 
+            [category]="project.category" 
+            [img]="project.img"
+            [projectCardImg]="project.projectCardImg"
+            [id]="project.id"
+            [link]="project.link">
+          </app-project>
+        </div>
+  </div>
+</div>

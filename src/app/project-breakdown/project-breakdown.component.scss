@@ -1,0 +1,17 @@
+.project-breakdown-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.project-breakdown{
+    width: 80svw;
+    align-self: center;
+}
+
+@media (max-width: 768px) {
+    .project-breakdown-container{
+        font-size: 15px;
+    }
+    
+}

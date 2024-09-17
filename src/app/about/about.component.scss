@@ -1,0 +1,266 @@
+:host {
+    --white: #f6f6f6;
+}
+
+
+
+.about-me-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+}
+
+.title {
+    margin: 0;
+}
+
+.about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 400;
+    width: 80svw;
+
+}
+
+.left {
+    width: 40vw;
+    margin: 0;
+    font-weight: 500;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    width: 60vh;
+    height: 100%;
+}
+
+.portrait {
+    height: 45vh;
+    border-radius: 20px;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    margin-bottom: 1rem;
+}
+
+.linkedinlogo, 
+.emailicon,
+.resumeicon {
+    height: 6svh;
+}
+
+.contacts a img {
+    height: 3svh;
+    transition: height 0.3s ease;
+}
+
+.contacts a:hover img {
+    height: 4svh;
+}
+
+.fadeInFromLeft {
+    animation: fadeInLeft 1.5s ease-in-out;
+}
+
+.fadeInFromRight {
+    animation: fadeInRight 1.5s ease-in-out;
+}
+
+.fadeInFromBottom {
+    animation: fadeInBottom 1.5s ease-in-out;
+}
+
+.fadeInFromTop {
+    animation: fadeInTop 1.5s ease-in-out;
+}
+
+.fadeInFromTopReverse{
+    animation: fadeInTopReverse 1.5s ease-in-out;
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes fadeInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fadeInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fadeInTopReverse {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+}
+
+
+@media (min-width: 1400px) {
+    .about {
+        height: 70vh;
+    }
+}
+
+@media (max-width: 1399px) and (min-width: 1250px) {
+    .about {
+        height: 70vh;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 1000px) {
+    .about {
+        height: 70vh;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 999px) and (min-width: 950px) {
+    .about {
+        height: 70vh;
+        font-size: 16px;
+    }
+    .portrait {
+        height: 35vh; 
+        width: auto; 
+        order: -1; 
+    }
+}
+
+@media (max-width: 948px) and (min-width: 769px){
+    .about {
+        flex-direction: column-reverse; 
+        align-items: center; 
+        width: 80%; 
+        font-size: 20px; 
+    }
+
+    .left,
+    .right {
+        width: 100%; 
+        align-items: center; 
+        align-content: center;
+    }
+
+    .right {
+        margin-bottom: 30px;
+    }
+
+    .portrait {
+        height: 35vh; 
+        width: auto; 
+        order: -1; 
+    }
+
+    .contacts a img {
+        height: 4vh; 
+    }
+
+
+    .left, .right, .contacts {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column-reverse; 
+        align-items: center; 
+        width: 80%; 
+        font-size: 20px; 
+    }
+
+    .left,
+    .right {
+        width: 100%; 
+        align-items: center; 
+        align-content: center;
+    }
+
+    .right {
+        margin-bottom: 30px;
+    }
+
+    .portrait {
+        height: 35vh; 
+        width: auto; 
+        order: -1; 
+    }
+
+    .contacts {
+        justify-content: space-between; 
+        width: 60%; 
+    }
+
+    .contacts a img {
+        height: 3vh; 
+    }
+
+    .left, .right, .contacts {
+        padding: 0 10px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .about {
+        font-size: 20px; 
+    }
+
+}

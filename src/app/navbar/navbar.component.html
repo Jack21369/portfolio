@@ -1,0 +1,17 @@
+<div class="navbar-container" id="navbar-container">
+    <a href="" class="logo-container">
+        <img class="logo" src="../../assets/imgs/logo-white.png" alt="logo">
+    </a>
+    
+    <div class="hamburger" id="hamburger" (click)="toggleMenu()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    
+    <div id="nav-buttons" class="nav-buttons">
+        <button (click)="scrollToProjects()" class="glowing-button projects-button">My Work</button>
+        <button (click)="scrollToAbout()" class="glowing-button about-me-button">About Me</button>
+        <a href="../../assets/resume.pdf" target="_blank" class="glowing-button resume">Resume</a>
+    </div>
+</div>
