@@ -7,7 +7,7 @@
 - Home Page, About Me Page, Projects Page, Individual Projects Page
 - HTML: Primarily using div, p, span, h, a, img, and button elements
 - CSS: Utilized flex box, animations, media queries, and other styling attributes like background colors and margins
-- Advanced Feature: Rotating carousel of Organizations I've worked with or am currently involved in
+- Advanced Feature: Rotating carousel of organizations I've worked with or am currently involved in
 
 
 ## How long it took you to complete the assignment
