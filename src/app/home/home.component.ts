@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   startTextLoad() {
     this.intervalId = setInterval(() => {
       this.textLoad();
-    }, 9000); // Adjust the interval as needed
+    }, 9000);
   }
 
   stopTextLoad() {
@@ -40,7 +40,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     }, 3000);
 
     setTimeout(() => {
-      this.text!.textContent = "Frontend Developer";
+      this.text!.textContent = "Full Stack Developer";
     }, 6000);
   }
 

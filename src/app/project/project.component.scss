@@ -18,15 +18,14 @@ text-decoration: none;
 }
 
 .project-card:hover {
-  border-color: hsla(188, 100%, 28%, 0.479);
+  border-color: hsla(188, 100%, 42%, 0.269);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
   cursor: pointer;
 }
 
 .project-card:hover img {
-  --tw-shadow: 0px 0px 58px 20px hsla(188, 100%, 28%, 0.247);
-  --tw-shadow-colored: 0px 0px 58px 20px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  height: 60%;
+  border: 4px solid hsla(188, 100%, 42%, 0.269);
 }
 
 .project-img {
@@ -35,24 +34,27 @@ text-decoration: none;
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  height: 55%;
+  height: 50%;
 }
 
 img {
-  width: 70%;
-  min-width: 70%;
+  height: 50%;
   border-radius: 0.75rem;
-  --tw-shadow: 0px 0px 58px 20px rgba(85, 85, 85, .2);
-  --tw-shadow-colored: 0px 0px 58px 20px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #7d7d7d00), var(--tw-ring-shadow, 0 0 #86868600), var(--tw-shadow);
-  transition: box-shadow 0.3s ease-in-out; /* Add this line */
+  transition: height 0.3s ease-in-out; 
+  border: 4px solid #e0e0e0;
 }  
 
 .separator {
   border: none;
   height: 4px;
   background-color: #e0e0e0; 
-  margin: 0 10% 0 10%; 
+  margin: 0 6% 0 6%; 
+  transition: margin 0.3s ease-in-out; 
+}
+
+.project-card:hover .separator {
+  background-color: hsla(188, 100%, 42%, 0.269); 
+  margin: 0 4% 0 4%; 
 }
 
 .project-info {

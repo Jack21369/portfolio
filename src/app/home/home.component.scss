@@ -1,5 +1,3 @@
-
-
 :host {
     --white: #f6f6f6;
 }
@@ -78,36 +76,21 @@
 }
 
 .glowing-button {
-    border: 3px solid transparent;
-    background: linear-gradient(white, white), linear-gradient(45deg, #35d6c9, #4fc3f7, #a3f7bf);
-    background-origin: border-box;
-    background-clip: padding-box,border-box;
-    border-radius: 20px;
-    font-size: 25px;
-    padding: 10px 20px;
-    font-weight: 400;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.glowing-button:hover {
-    background-image: linear-gradient(45deg, #35d6c9, #4fc3f7, #a3f7bf, #35d6c9);
-}
-
-.glowing-button{
     border: none;
     outline: none;
     color: black;
     cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 20px;
+    border-radius: 10px;
     font-size: 20px;
-    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: 400;
     transform: translateY(10vh);
     animation: returnPosition 2s forwards;
+    text-decoration: none;
+}
 
+.glowing-button:hover {
+    background-image: linear-gradient(45deg, #35d6c9, #4fc3f7, #a3f7bf, #35d6c9);
 }
 
 .glowing-button::before {
@@ -115,7 +98,7 @@
     background: linear-gradient(45deg, #35d6c9, #4fc3f7, #a3f7bf, #35d6c9);
     position: absolute;
     top: -2px;
-    left:-2px;
+    left: -2px;
     background-size: 400%;
     z-index: -1;
     filter: blur(5px);
@@ -136,11 +119,11 @@
     transform: translateY(100vh);
 }
 
-.glowing-button:hover:before{
+.glowing-button:hover::before {
     opacity: 1;
 }
 
-.glowing-button:after{
+.glowing-button::after {
     z-index: -1;
     content: '';
     position: absolute;
@@ -152,67 +135,62 @@
     border-radius: 10px;
 }
 
-
-/* When the screen size is greater than 1200px, set a maximum font size */
 @media (min-width: 1200px) {
     .home .text {
         font-size: 60px;
     }
     .glowing-button {
-        font-size: 18px; /* Maximum font size */
-        padding: 10px 20px; /* Maximum padding */
-        border-radius: 20px; /* Maximum border-radius */
+        font-size: 18px;
+        padding: 10px 20px;
+        border-radius: 20px; 
     }
     .home-buttons {
-        width: 500px; /* Maximum gap */
+        width: 500px;
         margin-top: 75px;
     }
 }
 
-/* Adjust font size for medium screens */
 @media (max-width: 1199px) and (min-width: 992px) {
     .home .text {
-        font-size: 50px; /* Adjust as needed */
+        font-size: 50px;
     }
     .glowing-button {
-        font-size: 16px; /* Adjust as needed */
-        padding: 8px 16px; /* Adjust as needed */
-        border-radius: 16px; /* Adjust as needed */
+        font-size: 16px;
+        padding: 8px 16px;
+        border-radius: 16px;
     }
     .home-buttons {
-        width: 400px; /* Adjust as needed */
+        width: 400px;
         margin-top: 50px;
     }
 }
 
-/* Adjust font size for small screens */
 @media (max-width: 991px) and (min-width: 768px) {
     .home .text {
-        font-size: 40px; /* Adjust as needed */
+        font-size: 40px;
     }
     .glowing-button {
-        font-size: 14px; /* Adjust as needed */
-        padding: 6px 12px; /* Adjust as needed */
-        border-radius: 12px; /* Adjust as needed */
+        font-size: 14px;
+        padding: 6px 12px;
+        border-radius: 12px;
     }
     .home-buttons {
-        width: 300px; /* Adjust as needed */
+        width: 300px;
         margin-top: 25px;
     }
 }
 
-/* Adjust font size for extra small screens */
 @media (max-width: 767px) {
     .home .text {
-        font-size: 30px; /* Adjust as needed */
+        font-size: 30px;
     }
     .glowing-button {
-        font-size: 14px; /* Adjust as needed */
-        padding: 6px 12px; /* Adjust as needed */
-        border-radius: 12px; /* Adjust as needed */
+        font-size: 14px;
+        padding: 6px 12px;
+        border-radius: 12px;
     }
     .home-buttons {
-        width: 300px; /* Adjust as needed */
+        width: 300px;
         margin-top: 25px;
     }
 }
