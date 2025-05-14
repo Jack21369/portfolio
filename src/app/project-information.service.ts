@@ -8,6 +8,26 @@ export class ProjectInformationService {
 
   protected projectDetailsList: ProjectDetails[] = [
     { 
+      name: 'Glowli Health & Beauty', 
+      technologies: 'Angular TypeScript Vercel Figma', 
+      description: 'Freelance project for a health and beauty salon.', 
+      category: ['Front-End', 'Hosting', 'Web Design'], 
+      img: "../../assets/imgs/glowlishowcase.png", 
+      projectCardImg: "../../assets/imgs/glowli.png", 
+      id: "Glowli", 
+      link:"https://www.glowlihb.com/" 
+    },
+    { 
+      name: 'Fresh and Best Cafe 2', 
+      technologies: 'Angular TypeScript Firebase Figma', 
+      description: 'Freelance project for a small business restaurant.', 
+      category: ['Front-End', 'Hosting', 'Web Design'], 
+      img: "../../assets/imgs/freshandbestcafe2showcase.png", 
+      projectCardImg: "../../assets/imgs/freshandbestcafe2.png", 
+      id: "FreshandBest", 
+      link:"https://www.freshandbestcafe2.com/" 
+    },
+    { 
       name: 'Fablix', 
       technologies: 'Java TypeScript HTML CSS MySQL AWS', 
       description: 'Full-Stack Movie Browsing App containing 100k+ Movies and Actors.', 
@@ -16,26 +36,6 @@ export class ProjectInformationService {
       projectCardImg: "../../assets/imgs/fablix.png", 
       id: "FabFlix", 
       link:"#"
-    },
-    { 
-      name: 'Portfolio V2', 
-      technologies: 'Angular TypeScript Firebase Figma', 
-      description: 'Revamped version of my original portfolio.', 
-      category: ['Front End', 'Hosting', 'Web Design'], 
-      img: "../../assets/imgs/portfoliov2mock.png", 
-      projectCardImg: "../../assets/imgs/portfoliov2.png", 
-      id: "PortfolioV2", 
-      link:"#" 
-    },
-    { 
-      name: 'Portfolio V1', 
-      technologies: 'JavaScript HTML CSS', 
-      description: 'My first attempt of creating a web portfolio from scratch using HTML, CSS, and JavaScript.', 
-      category: ['Front End', 'Web Design'], 
-      img: "../../assets/imgs/oldport.png", 
-      projectCardImg: "../../assets/imgs/oldwebsite.png", 
-      id: "PortfolioV1", 
-      link:"https://tinyurl.com/jackelweb"
     },
     { 
       name: 'ICS Search Engine', 
